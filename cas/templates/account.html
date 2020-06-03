@@ -1,0 +1,174 @@
+{% load i18n %} {% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Account</title>
+
+    <!-- FONTS -->
+    <!-- Lato -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous"
+    />
+    <!-- CSS BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/base_styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/class.css' %}" />
+    <!-- Nav Top -->
+    <link rel="stylesheet" href="{% static 'css/nav_top.css' %}" />
+    <!-- ACCOUNT -->
+    <link rel="stylesheet" href="{% static 'css/account.css' %}" />
+    <!-- Account header -->
+    <link rel="stylesheet" href="{% static 'css/_account-header.css' %}" />
+    <!-- Account body -->
+    <link rel="stylesheet" href="{% static 'css/_account-body.css' %}" />
+    <!-- Account body content-->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/_account-body-content.css' %}"
+    />
+  </head>
+
+  <body>
+    {% include "top_nav.html" %}
+    <!-- prettier-ignore -->
+    {% verbatim %}
+    <div id="background-scale"></div>
+    <div id="account_view">
+      <div class="main-content">
+        <div class="main-content-header">
+          <div class="name">
+            {{ my.name.first }}&nbsp;{{ my.name.last }}
+          </div>
+          <div class="profile-img">
+            <img src="/static/images/me.png" alt="" />
+          </div>
+          <div class="info container-fluid">
+            <div class="holder left">
+              <div class="member-since">
+                Joined&nbsp;{{ my.joined }}
+              </div>
+            </div>
+            <div class="holder right">
+              <div class="title">Personal Info</div>
+              <div class="tabs">
+                <div class="option" v-for="option in options">
+                  <router-link active-class="active" :to="{ name: option.link}">
+                    <div class="">
+                      <div class="icon">
+                        <i class="material-icons">{{ option.icon }}</i>
+                      </div>
+                      <div class="text">{{ option.title }}</div>
+                    </div>
+                  </router-link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-body">
+          <div class="nav">
+            <ul>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'personal'}"
+              >
+                <a>
+                  Personal Info
+                </a>
+              </router-link>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'subscriptions'}"
+              >
+                <a>
+                  Subscriptions
+                </a>
+              </router-link>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'notifications'}"
+              >
+                <a>
+                  Notifications
+                </a>
+              </router-link>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'privacy'}"
+              >
+                <a>
+                  Privacy
+                </a>
+              </router-link>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'security'}"
+              >
+                <a>
+                  Security
+                </a>
+              </router-link>
+              <router-link
+                tag="li"
+                active-class="active"
+                :to="{ name: 'accessibility'}"
+              >
+                <a>
+                  Accessibility
+                </a>
+              </router-link>
+            </ul>
+          </div>
+          <div class="body-content">
+            <router-view></router-view>
+          </div>
+          <div class="form-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VUE.JS Files -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Router -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    {% endverbatim %}
+    <!-- VUE APP -->
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>

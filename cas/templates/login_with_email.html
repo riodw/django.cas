@@ -1,0 +1,18 @@
+{% extends "__login.html" %}
+<!-- prettier-ignore -->
+
+{% block body_content %}
+<div class="title">
+  <span id="title">{{ email }}</span>
+</div>
+<div class="details">
+  <h3>Check your email</h3>
+  <div class="email_icon">
+    <i class="fas fa-envelope-open"></i>
+  </div>
+  <p>Open email, tap confirm. That's it!</p>
+  <p class="text-thin">No email? <a href="#">Send again</a>.</p>
+</div>
+{% include "mama_cas/_messages.html" %}
+<!-- prettier-ignore -->
+{% endblock body_content %}

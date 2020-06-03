@@ -1,0 +1,193 @@
+body {
+  background-color: #f4f7f8;
+}
+
+.title {
+  text-align: center;
+}
+
+#login {
+  width: 100%;
+  min-width: 370px;
+  max-width: 460px;
+  height: 490px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+}
+
+#login .content {
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 3em 0;
+}
+
+#login .content .header .image {
+  margin: 0 auto;
+  width: 70px;
+  padding: 6px;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: 0 1px 28px rgba(0, 0, 0, 0.2);
+}
+
+#login .content .header .title {
+  font-size: 3rem;
+  margin: 1em auto;
+  margin-bottom: 1.2em;
+}
+
+#login .content .body {
+  margin: auto;
+  max-width: 320px;
+}
+
+#login .content .body .title {
+  margin: auto;
+  color: #444;
+}
+
+#login .content .body .login_form {
+  margin: 1em 0;
+}
+
+#login .content .body .login_form .email input {
+  border-radius: 40px;
+  padding: 12px 20px;
+  height: 44px;
+}
+
+#login .content .body .login_form .pass {
+  width: 100%;
+  padding: 20px;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 1em 0;
+  margin-bottom: 0;
+  border: 1px solid #ccc;
+  background-color: #f2f2f4;
+}
+
+.pass * {
+  box-sizing: border-box;
+}
+
+label:before {
+  border-color: #bdc3c7 !important;
+}
+
+.state label {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  margin: 0;
+  text-indent: 1.5em;
+  /* min-width: calc(1em + 2px); */
+}
+
+input:checked ~ .state label:after {
+  background-color: #1a3774 !important;
+  background-color: #3e4f6d !important;
+}
+
+.state label:after,
+.state label:before {
+  content: "";
+  width: calc(1em + 2px);
+  height: calc(1em + 2px);
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: 1px solid transparent;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+}
+
+.pass #useEmailCheckbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 1em;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pass #passwordArea {
+  display: none;
+  margin-top: 1em;
+}
+
+.pass #passwordArea input {
+  border-radius: 2px;
+}
+
+#login .content .body .continue button {
+  letter-spacing: 1px;
+  width: 100%;
+  border-radius: 40px;
+  height: 44px;
+  color: #fff;
+  border: none;
+  background-color: #1a3774;
+  background-color: #3e4f6d;
+}
+
+.links {
+  margin-top: 2em;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.links div {
+  display: inline-block;
+}
+
+.links a {
+  color: #666;
+  margin-right: 1em;
+}
+
+.links a:last-of-type {
+  margin: 0;
+}
+
+/* login_with_email */
+.details * {
+  text-align: center;
+}
+
+.email_icon {
+  color: #1a3774;
+  color: #3e4f6d;
+  font-size: 6rem;
+}
+
+.messages {
+  width: 100%;
+  text-align: center;
+  color: #b00020;
+}
+
+.messages .alert {
+  margin: 1em 0 0 0;
+  height: 45px;
+  padding: 12px;
+}

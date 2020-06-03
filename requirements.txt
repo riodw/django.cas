@@ -1,0 +1,15 @@
+certifi==2018.1.18
+chardet==3.0.4
+Django==2.0.4
+django-cas-ng==3.5.9
+-e git+https://github.com/jbittel/django-mama-cas.git@b820306c182879d70d2470d4882b911ab5fc01fc#egg=django_mama_cas
+idna==2.6
+lxml==4.2.1
+Pillow==5.1.0
+pkg-resources==0.0.0
+psycopg2==2.7.4
+python-cas==1.2.0
+pytz==2018.3
+requests==2.18.4
+six==1.11.0
+urllib3==1.22

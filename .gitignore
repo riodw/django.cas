@@ -1,0 +1,31 @@
+# https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
+
+# Distribution
+env/
+node_modules/
+bin/*
+bin/
+bin
+lib/*
+lib/
+lib
+
+# Packaging
+.Python
+*.pyc
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Miscellaneous
+.DS_Store
+.bash_history
+pyvenv\.cfg
+
+pip-selfcheck\.json
+
+# python3 manage.py createsuperuser
+# Super User
+# admin
+# 1!p4gc4gt!

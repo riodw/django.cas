@@ -1,0 +1,100 @@
+.main-content-header {
+  height: 170px;
+  /* margin-bottom: 1.5em; */
+}
+
+.main-content-header .name {
+  position: absolute;
+  display: block;
+  color: #fff;
+  font-size: 2.4rem;
+  left: 138px;
+  top: 20px;
+}
+
+.main-content-header .profile-img {
+  position: relative;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+  /* background-color: #fff; */
+  background-color: transparent;
+  z-index: 20;
+}
+
+.main-content-header .info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 110px;
+  padding: 1em 1.5em;
+  display: flex;
+}
+
+.main-content-header .info .holder {
+  position: relative;
+  height: 100%;
+  align-items: flex-start;
+  display: flex;
+}
+
+.main-content-header .info .holder.left {
+  width: 220px;
+}
+
+.main-content-header .info .holder.right {
+  flex-direction: column;
+}
+
+.main-content-header .info .holder .title {
+  font-size: 2.5rem;
+}
+
+.main-content-header .info .holder .tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.main-content-header .info .holder .option {
+  width: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  font-size: 1.2rem;
+}
+
+/* Active Tab (Location) */
+.main-content-header .info .holder .option a.active,
+.main-content-header .info .holder .option a.active:hover {
+  color: #444;
+}
+
+.main-content-header .info .holder .option a,
+.main-content-header .info .holder .option a:hover {
+  width: 60px;
+  height: 50px;
+  text-decoration: none;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+.main-content-header .info .holder .option a:hover {
+  color: #555;
+}
+
+.main-content-header .info .holder .option a > div {
+  align-self: flex-end;
+  flex: 1;
+}
+
+.main-content-header .info .holder .member-since {
+  position: absolute;
+  bottom: 0;
+  color: #777;
+}

@@ -1,0 +1,108 @@
+<div id="nav_top">
+  <div id="menu" class="inline">
+    <a class="account-option inline">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+  <div id="account">
+    <div class="top_nav-dropdown inline">
+      <a class="account-option">
+        <i class="material-icons account-option-icon">notifications</i>
+      </a>
+      <div id="menu-notifications" class="top_nav-dropdown-menu">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="image"></span>
+              <span class="text">Notifications</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top_nav-dropdown inline">
+      <a class="account-option">
+        <i class="material-icons account-option-icon">apps</i>
+      </a>
+      <div id="menu-apps" class="top_nav-dropdown-menu">
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src="https://gitlab.com/uploads/-/system/project/avatar/5306776/Lightning_Logo.png"
+                alt="Thunderstorm"
+              />
+              <span class="text">Thunderstorm</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://gitlab.com/uploads/-/system/project/avatar/5406886/Storm_Logo.png"
+                alt="Account"
+              />
+              <span class="text">Account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top_nav-dropdown inline">
+      <a class="account-option">
+        <i class="material-icons">account_circle</i>
+      </a>
+      <div id="menu-account_circle" class="top_nav-dropdown-menu">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="image"></span>
+              <span class="text">Account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(name) {
+      // Show account-option
+      document.getElementById(name).classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      var dropdowns = document.getElementsByClassName("top_nav-dropdown-menu");
+
+      if (document.getElementById("account").contains(event.target)) {
+        var et = event.target;
+
+        // if element is menu - skip
+        if (et.matches(".top_nav-dropdown-menu")) return;
+        // if element is inside menu - skip
+        for (var i = 0; i < dropdowns.length; i++) {
+          if (dropdowns[i].contains(et)) return;
+        }
+
+        var menu = "";
+        if (et.matches(".account-option")) menu = et.nextElementSibling;
+        else if (et.parentElement.matches(".account-option"))
+          menu = et.parentElement.nextElementSibling;
+
+        if (menu) {
+          menu.classList.toggle("show");
+          for (var i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i] == menu) continue;
+            dropdowns[i].classList.remove("show");
+          }
+          return;
+        }
+      }
+      // Hide All
+      for (var i = 0; i < dropdowns.length; i++)
+        dropdowns[i].classList.remove("show");
+    };
+  </script>
+</div>

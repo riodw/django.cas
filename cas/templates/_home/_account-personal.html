@@ -1,0 +1,99 @@
+<div class="account-body">
+  <div class="half left">
+    <div class="header">
+      <div class="title">
+        General
+      </div>
+      <div class="title-sub">
+        &nbsp;
+      </div>
+    </div>
+    <div class="body">
+      <div class="form-group">
+        <span class="input input--hoshi">
+          <label for="account-personal-name-first">First Name</label>
+          <input
+            id="account-personal-name-first"
+            class="input__field input__field--hoshi"
+            type="text"
+            v-bind:value="[[ user.name.first ]]"
+          />
+          <label
+            class="input__label input__label--hoshi input__label--hoshi-color-1"
+          >
+            <span
+              class="input__label-content input__label-content--hoshi"
+            ></span>
+          </label>
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="input input--hoshi">
+          <label for="account-personal-name-last">Last Name</label>
+          <input
+            id="account-personal-name-last"
+            class="input__field input__field--hoshi"
+            type="text"
+            v-bind:value="[[ user.name.last ]]"
+          />
+          <label
+            class="input__label input__label--hoshi input__label--hoshi-color-1"
+          >
+            <span
+              class="input__label-content input__label-content--hoshi"
+            ></span>
+          </label>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="half right">
+    <div class="header">
+      <div class="title">
+        Contact
+      </div>
+      <div class="title-sub">
+        &nbsp;
+      </div>
+    </div>
+    <div class="body">
+      <div class="form-group">
+        <span class="input input--hoshi">
+          <label for="account-personal-name-first">Email</label>
+          <input
+            id="account-personal-name-first"
+            class="input__field input__field--hoshi"
+            type="text"
+            v-bind:value="[[ user.email ]]"
+          />
+          <label
+            class="input__label input__label--hoshi input__label--hoshi-color-1"
+          >
+            <span
+              class="input__label-content input__label-content--hoshi"
+            ></span>
+          </label>
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="input input--hoshi">
+          <label for="account-personal-name-last">Phone</label>
+          <input
+            id="account-personal-name-last"
+            class="input__field input__field--hoshi"
+            type="text"
+            v-bind:value="[[ user.phone ]]"
+          />
+          <label
+            class="input__label input__label--hoshi input__label--hoshi-color-1"
+          >
+            <span
+              class="input__label-content input__label-content--hoshi"
+            ></span>
+          </label>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

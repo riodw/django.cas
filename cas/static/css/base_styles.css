@@ -1,0 +1,58 @@
+* {
+  -webkit-font-kerning: auto;
+  font-kerning: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+  display: block;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: auto;
+}
+
+button {
+  outline: none !important;
+}
+
+a,
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li {
+  display: flex;
+  list-style: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

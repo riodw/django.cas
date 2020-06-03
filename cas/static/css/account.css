@@ -1,0 +1,99 @@
+/*
+https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.10110896817743492,0.21532465445206225,0.4568627450980392,0.5025715204114433,0.650731135134678,0.9640522875816994,0.21176470588235294,0.45098039215686275,0.9568627450980393,0.23816779170684665,0.3083803820061965,0.4568627450980392,0.16750241080038575,0.3567180970750902,0.7568627450980392&swatchOrder=0,1,2,3,4
+*/
+
+/*
+orange:
+#ff5623
+background: linear-gradient(#ff9200, #ff5c36);
+
+red:
+background: linear-gradient(#ff5b39, #ff2964);
+
+blue:
+background-color: #1A3774;
+background-color: #3e4f6d;
+#3673F4
+background: linear-gradient(#1a61f0 2%, #17d4fd 150%);
+*/
+
+body {
+  /* background: linear-gradient(#1a61f0 2%, #17d4fd 150%); */
+  background-color: #f4f7f8;
+  background-attachment: fixed;
+  min-height: 660px;
+  min-width: 710px;
+}
+
+#background-scale {
+  position: absolute;
+  min-height: 150px;
+  height: calc(50% - 175px);
+  width: 100%;
+  /* background: linear-gradient(#ff5b39 2%, #ff2964 150%); */
+  /* background: linear-gradient(#1a61f0 12%, #17d4fd 150%); */
+  background-color: #3e4f6d;
+  z-index: 0;
+  max-height: 225px;
+  min-width: 710px;
+}
+
+#account_view {
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  display: block;
+  position: relative;
+  max-height: 800px;
+}
+
+.main-content {
+  margin: auto 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 600px;
+}
+
+.info,
+.profile-img,
+.main-content-body {
+  background-color: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 38px rgba(0, 0, 0, 0.3);
+}
+.info {
+  border-radius: 10px 10px 0 0;
+  z-index: 10;
+}
+
+.main-content-body {
+  border-radius: 0 0 10px 10px;
+}
+
+.main-content > div {
+  position: relative;
+}
+
+.form-action {
+  position: absolute;
+  background-color: #ff5623;
+  bottom: 0;
+  right: 0;
+}
+
+.form-action a,
+.form-action a:hover {
+  width: 100%;
+  font-size: 1.5rem;
+  display: block;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  text-align: center;
+}

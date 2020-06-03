@@ -1,0 +1,11 @@
+.text-thin {
+  font-weight: 200;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.half {
+  flex: 1;
+}
